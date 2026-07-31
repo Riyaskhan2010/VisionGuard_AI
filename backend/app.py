@@ -97,7 +97,8 @@ def _seed_initial_data():
     extra_workers = [
         ("Sarah Chen", "sarah@visionguard.com", "Welding Unit B"),
         ("Raj Patel", "raj@visionguard.com", "Final QC"),
-    ]    for name, email, dept in extra_workers:
+    ]
+    for name, email, dept in extra_workers:
         if not User.query.filter_by(email=email).first():
             w = User(name=name, email=email, role="Worker", department=dept)
             w.set_password("worker123")
