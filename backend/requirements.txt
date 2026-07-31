@@ -1,0 +1,12 @@
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-JWT-Extended==4.6.0
+Flask-CORS==4.0.1
+Werkzeug==3.0.3
+SQLAlchemy==2.0.31
+ultralytics==8.2.67
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+numpy==1.26.4
+python-dotenv==1.0.1
+reportlab==4.2.2

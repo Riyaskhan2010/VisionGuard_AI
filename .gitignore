@@ -1,0 +1,33 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/database/visionguard.db
+backend/uploads/
+backend/check_output.txt
+backend/check_db.py
+backend/migrate.py
+*.db
+*.sqlite3
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Environment
+backend/.env
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.kiro

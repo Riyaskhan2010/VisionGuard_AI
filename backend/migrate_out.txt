@@ -1,0 +1,26 @@
+﻿.\venv\Scripts\python.exe : Traceback (most recent call last):
+At line:1 char:1
++ .\venv\Scripts\python.exe migrate.py 2>&1 | Out-File -FilePath migrat ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::Strin 
+   g) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Users in DB:
+  File 
+"C:\Users\moham\OneDrive\Documents\kiro\emergent\visionguard\backend\migrate.py", 
+line 119, in <module>
+  Admin    | admin@visionguard.com               | active=1
+  Worker   | worker@visionguard.com              | active=1
+    migrate()
+  File 
+"C:\Users\moham\OneDrive\Documents\kiro\emergent\visionguard\backend\migrate.py", 
+line 115, in migrate
+    print("\nMigration complete \u2713")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_
+x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 21: 
+character maps to <undefined>
