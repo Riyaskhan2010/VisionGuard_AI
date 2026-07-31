@@ -72,24 +72,32 @@ def _seed_initial_data():
     from models.recommendation_config import RecommendationConfig
 
     # Admin
-    if not User.query.filter_by(email="admin@visionguard.com").first():
-        admin = User(name="Admin User", email="admin@visionguard.com", role="Admin")
-        admin.set_password("admin123")
+    if not User.query.filter_by(email="mriyaskhan254@gmail.com").first():
+        admin = User(name="Mohamed Riyas", email="mriyaskhan254@gmail.com",
+                     role="Admin")
+        admin.set_password("riyas@2010")
         db.session.add(admin)
+    # Remove old default admin if exists
+    old_admin = User.query.filter_by(email="admin@visionguard.com").first()
+    if old_admin:
+        db.session.delete(old_admin)
 
-    # Worker
-    if not User.query.filter_by(email="worker@visionguard.com").first():
-        worker = User(name="John Worker", email="worker@visionguard.com",
+    # Worker 1
+    if not User.query.filter_by(email="rx.santhosh888@gmail.com").first():
+        worker = User(name="Santhosh", email="rx.santhosh888@gmail.com",
                       role="Worker", department="Assembly Line A")
-        worker.set_password("worker123")
+        worker.set_password("santhosh@5831")
         db.session.add(worker)
+    # Remove old default worker if exists
+    old_worker = User.query.filter_by(email="worker@visionguard.com").first()
+    if old_worker:
+        db.session.delete(old_worker)
 
     # Extra workers for demo
     extra_workers = [
         ("Sarah Chen", "sarah@visionguard.com", "Welding Unit B"),
         ("Raj Patel", "raj@visionguard.com", "Final QC"),
-    ]
-    for name, email, dept in extra_workers:
+    ]    for name, email, dept in extra_workers:
         if not User.query.filter_by(email=email).first():
             w = User(name=name, email=email, role="Worker", department=dept)
             w.set_password("worker123")

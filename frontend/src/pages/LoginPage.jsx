@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import {
   Shield, Eye, EyeOff, AlertCircle, CheckCircle,
   ArrowLeft, UserPlus, LogIn, Cpu, Zap,
-  BarChart3, FileText, Lock,
+  BarChart3, FileText,
 } from "lucide-react";
 import LoadingSpinner from "../components/LoadingSpinner";
 
@@ -201,17 +201,6 @@ function LoginForm({ role, setRole, form, setForm, showPwd, setShowPwd, loading,
       </form>
 
       {/* Demo creds */}
-      <div className="p-3 bg-slate-800/50 border border-slate-700/40 rounded-xl">
-        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5 flex items-center gap-1">
-          <Lock className="w-3 h-3" /> Demo Credentials
-        </p>
-        <p className="text-xs text-slate-500">
-          <span className="text-purple-400 font-semibold">Admin</span> — admin@visionguard.com / admin123
-        </p>
-        <p className="text-xs text-slate-500 mt-0.5">
-          <span className="text-blue-400 font-semibold">Worker</span> — worker@visionguard.com / worker123
-        </p>
-      </div>
     </div>
   );
 }
