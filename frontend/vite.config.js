@@ -15,9 +15,17 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-  },
-  define: {
-    // Inject backend URL at build time via env variable
-    __BACKEND_URL__: JSON.stringify(process.env.VITE_BACKEND_URL || ""),
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split large vendor libraries into separate chunks
+          "react-vendor":  ["react", "react-dom", "react-router-dom"],
+          "chart-vendor":  ["chart.js", "react-chartjs-2"],
+          "icons-vendor":  ["lucide-react"],
+          "axios-vendor":  ["axios"],
+        },
+      },
+    },
   },
 });
