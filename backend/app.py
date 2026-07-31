@@ -147,3 +147,6 @@ def _seed_initial_data():
 if __name__ == "__main__":
     application = create_app()
     application.run(host="0.0.0.0", port=5000, debug=True)
+
+# For gunicorn: gunicorn "app:create_app()"
+app = create_app()

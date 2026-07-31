@@ -13,4 +13,11 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    outDir: "dist",
+  },
+  define: {
+    // Inject backend URL at build time via env variable
+    __BACKEND_URL__: JSON.stringify(process.env.VITE_BACKEND_URL || ""),
+  },
 });
